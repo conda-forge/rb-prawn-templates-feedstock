@@ -11,9 +11,9 @@ source:
 
 build:
   noarch: generic
-  number: 0
+  number: 1
   script:
-    - gem install -N -l -V --norc --ignore-dependencies {{ name }}-{{ version }}.gem
+    - gem install -N -l -V --norc --ignore-dependencies -n $PREFIX/bin {{ name }}-{{ version }}.gem
     - gem unpack {{ name }}-{{ version }}.gem
 
 requirements:
@@ -22,7 +22,7 @@ requirements:
   run:
     - {{ pin_compatible('ruby', max_pin='x.x') }}
     - rb-pdf-reader >=2.0,<3
-    - rb-prawn >=2.2,<3
+    - rb-prawn >=2.4.0,<2.5.0
 
 test:
   commands:
@@ -40,3 +40,4 @@ about:
 extra:
   recipe-maintainers:
     - jdmarques
+    - rudispr
