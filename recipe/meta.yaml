@@ -23,7 +23,7 @@ requirements:
     - {{ pin_compatible('ruby', max_pin='x.x') }}
     - rb-pdf-reader >=2.0,<3
     - rb-prawn >=2.4.0,<2.5.0
-    - rb-afm >=0.2.1,<2.0.0
+    - rb-afm >=0.2.2,<2.0.0
 
 test:
   commands:
